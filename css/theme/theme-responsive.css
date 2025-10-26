@@ -1,0 +1,323 @@
+/*
+
+[Responsive Stylesheet]
+
+Project: HostLooks - Responsive Hosting HTML Template
+Version: 1.4
+Author : themelooks.com
+
+
+NOTE:
+------
+PLEASE DO NOT EDIT THIS CSS, YOU MAY NEED TO USE "custom.css" FILE FOR WRITING YOUR CUSTOM CSS.
+WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SAFER TO USE "custom.css".
+
+
+[TABLE OF CONTENTS]
+
+1. MEDIA QUERIES
+    1.1. LARGE DEVICES, WIDE SCREENS
+    1.2. MEDIUM DEVICES, DESKTOPS
+    1.3. SMALL DEVICES, TABLETS
+    1.4. SMALL DEVICES, SMARTPHONES
+    1.5. CUSTOM, IPHONE RETINA
+
+*/
+
+/*------------------------------------*\
+    1. MEDIA QUERIES
+\*------------------------------------*/
+/* 1.1. LARGE DEVICES, WIDE SCREENS */
+@media screen and (max-width: 1199px) {
+
+}
+
+/* 1.2. MEDIUM DEVICES, DESKTOPS */
+@media screen and (max-width: 991px) {
+    /* HEADER SECTION */
+    .header--navbar .navbar-header {
+        float: none;
+        margin: 0;
+    }
+
+    .header--navbar .navbar-toggle {
+        display: block;
+        margin: 18.5px 0;
+    }
+
+    .header--navbar .navbar-collapse {
+        float: none !important;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        max-height: 320px;
+        margin-top: 0 !important;
+        padding: 5px 0;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        z-index: 999;
+    }
+
+    .header--navbar .navbar-collapse.collapse {
+        display: none !important;
+        overflow-y: auto !important;
+    }
+    .header--navbar .navbar-collapse.collapsing,
+    .header--navbar .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .header-nav--links {
+        float: none;
+    }
+
+    .header-nav--links > li {
+        float: none;
+    }
+
+    .header-nav--links > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header--navbar .navbar-form {
+        float: none !important;
+        position: relative;
+        right: auto;
+        margin-bottom: 18px;
+        margin-right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header--navbar .navbar-form .form-control {
+        width: auto !important;
+        min-width: 635px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #f2f2f2;
+        border-color: #eaeaea;
+    }
+
+    .header--navbar .navbar-form button {
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #393939;
+        background-color: #f9f9f9;
+        border-color: #eaeaea;
+    }
+
+    /* BANNER SECTION */
+    .banner--content + .banner--img,
+    .banner--img + .banner--content {
+        margin-top: 60px;
+    }
+
+    .banner--slider .owl-nav {
+        display: none;
+    }
+    
+    .banner--item .row--vc > div {
+        display: block;
+    }
+
+    .banner--down-btn {
+        bottom: 10px;
+    }
+
+    /* SERVICES SECTION */
+    .service--img {
+        width: 100%;
+    }
+
+    /* PRICING SECTION */
+    .pricing--bg-img {
+        height: 100% !important;
+    }
+
+    /* PRICING TABLE SECTION */
+    .pricing-table:before,
+    .pricing-table:after {
+        display: none;
+    }
+
+    .pricing-table .table thead {
+        display: none;
+    }
+
+    .pricing-table .table tbody tr {
+        display: block;
+    }
+
+    .pricing-table .table tbody tr td {
+        display: block;
+        position: relative;
+        padding: 10px 20px 10px 120px;
+        text-align: right;
+    }
+
+    .pricing-table .table tbody tr + tr {
+        margin-top: 30px;
+    }
+
+    .pricing-table .table tbody tr td + td {margin-top: 10px;}
+
+    .pricing-table .table tbody tr td:last-child {
+    }
+
+    .pricing-table .table tbody tr td:before {
+        content: attr(data-label);
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        margin-top: -13px;
+        font-weight: 600;
+    }
+
+    /* FEATURES SECTION */
+    .feature--item-right .img {
+        float: left;
+        margin-left: 0;
+        margin-right: 30px;
+    }
+
+    /* TEAM SECTION */
+    .team--member .social {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    /* BLOG SECTION */
+    .comment--items li ul {
+        padding: 0;
+    }
+
+    /* CONTACT SECTION */
+    .contact--form + .contact--info,
+    .contact--info + .contact--form {
+        margin-top: 54px;
+    }
+}
+
+/* 1.3. SMALL DEVICES, TABLETS */
+@media screen and (max-width: 767px) {
+    /* HEADER SECTION */
+    .header--navbar .navbar-brand {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header-nav--links {
+        margin: 7.5px 0 0;
+    }
+
+    .header--navbar .navbar-form {
+        margin-left: 0;
+    }
+
+    .header--navbar .navbar-form .form-group {
+        margin-bottom: 0;
+    }
+
+    .header--navbar .navbar-form .form-control {
+        min-width: 100%;
+        border-right-width: 1px;
+        border-radius: 18px;
+    }
+
+    .header--navbar .navbar-form button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    /* CALL TO ACTION SECTION */
+    .call-to-action--section .row--vc > div {
+        display: block;
+    }
+
+    .cta--action {
+        margin-top: 15px !important;
+        text-align: left;
+    }
+
+    /* TESTIMONIAL SECTION */
+    .testimonial--slider {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .testimonial--item .row--vb > div {
+        display: block;
+    }
+
+    .testimonial--img + .testimonial--content,
+    .testimonial--content + .testimonial--img {
+        margin-top: 30px;
+    }
+
+    /* FOOTER SECTION */
+    .footer--copyright {
+        text-align: center;
+    }
+    
+    .footer--copyright .float--left,
+    .footer--copyright .float--right {
+        float: none;
+    }
+
+    .footer--copyright p + img {
+        margin-top: 10px;
+    }
+}
+
+/* 1.4. SMALL DEVICES, SMARTPHONES */
+@media screen and (max-width: 480px) {
+    /* ABOUT SECTION */
+    .about-details--content ul li {
+        width: 100%;
+    }
+
+    /* SERVICES SECTION */
+    .service--item-right {
+        text-align: left;
+    }
+
+    .service--item-right .title .icon {
+        float: left;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    /* FEATURES SECTION */
+    .feature--item .img {
+        float: none;
+        width: 100%;
+    }
+
+    .feature--item .img img {
+        width: 100%;
+    }
+
+    /* TESTIMONIAL SECTION */
+    .testimonial--slider {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .testimonial--slider .owl-nav {
+        display: none;
+    }
+
+    /* COL XXS */
+    .col-xxs-12 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* 1.5. CUSTOM, IPHONE RETINA */
+@media screen and (max-width: 320px) {
+    
+}

@@ -1,0 +1,775 @@
+/*
+
+[Theme Overrides Stylesheet]
+
+Project: CloudServer - Responsive HTML5 Technology, Web Hosting and WHMCS Template
+Version: 1.4
+Author : themelooks.com
+
+
+NOTE:
+------
+PLEASE DO NOT EDIT THIS CSS, YOU MAY NEED TO USE "custom.css" FILE FOR WRITING YOUR CUSTOM CSS.
+WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SAFER TO USE "custom.css".
+
+
+[TABLE OF CONTENTS]
+
+1. GENERAL STYLES
+	##. DROPDOWN MENU
+	##. DATATABLES
+	##. BRANDING
+
+2. HEADER SECTION
+
+3. MAIN MENU SECTION
+
+4. HOME BANNER SECTION
+
+5. HOME SHORTCUTS SECTION
+
+6. MAIN BODY SECTION
+	6.1. DOMAIN PRICING
+	6.2. SIDEBAR
+
+7. LOGIN SECTION
+
+8. OTHER
+
+9. MEDIA QUERIES
+
+10. LANDING PAGE
+	10.1. PRICING
+	10.1. FAQ
+
+11. ORDER PAGE
+	11.1. PANEL SIDEBAR: LIST GROUP
+	11.2. DOMAIN SELECTION OPTIONS
+	11.3. SUMMERY
+	11.4. VIEW CART ITEMS
+
+*/
+
+/*------------------------------------*\
+    1. GENERAL STYLES
+\*------------------------------------*/
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    color: #119ee6;
+}
+
+a.label {
+    color: #fff; /* Reset the anchor label color */
+}
+
+a.btn:not(.btn-primary) {
+    color: #fff; /* Reset the anchor button color */
+}
+
+a.btn-default {
+    color: #333; /* Set the anchor default button color */
+}
+
+.btn-primary.disabled.focus,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover {
+	background-color: #119ee6;
+	border-color: #119ee6;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin-top: 2px;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.bg-color-red { color: #fff !important; background-color: #d9534f; }
+
+.bg-color-gold { color: #fff !important; background-color: #f0ad4e; }
+
+.bg-color-blue { color: #fff !important; background-color: #5bc0de; }
+
+.bg-color-asbestos { color: #fff !important; background-color: #7f8c8d; }
+
+.back-to-top-btn a {
+    color: #cde5f8;
+}
+
+.footer--copyright a {
+    color: #119ee6;
+}
+
+.domain-lookup-result .btn:not(.domain-contact-support) {
+    width: auto !important;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+.landing-page.ssl .detailed-info .panel-heading h4 a {
+    color: #fff !important;
+}
+
+.landing-page.ssl .detailed-info div.panel-heading {
+	background-color: #119ee6;
+}
+
+.landing-page .pricing .btn-group .btn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tiles .tile {
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #eee;
+}
+
+.tiles .tile:last-child {
+    border: 1px solid #eee;
+}
+
+@media screen and (max-width: 767px) {
+	.tiles .tile:nth-child(1),
+	.tiles .tile:nth-child(2) {
+		border-top: 1px solid #eee;
+		border-bottom-width: 0;
+	}
+	
+	.tiles .tile:nth-child(2) {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+}
+
+div.header-lined .breadcrumb {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.home-kb-search i {
+    top: -30px;
+}
+
+.btn-social {
+    padding: 10px 20px 10px 60px;
+    border-width: 0;
+    border-radius: 0;
+    transition-property: color, background-color;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-social i.fa {
+    width: 40px;
+    font-size: 1.2em;
+    line-height: 40px;
+}
+
+/* ##. DROPDOWN MENU */
+#main-body .dropdown-menu > li > a:hover,
+#main-body .dropdown-menu > li > a:focus {
+	color: #119ee6;
+	background-color: transparent;
+}
+
+/* ##. DATATABLES */
+.dataTables_wrapper {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+div.dataTables_wrapper table.table-list {
+    margin-bottom: 0 !important;
+}
+
+div.dataTables_wrapper table.table-list thead th {
+    position: relative;
+    z-index: 0;
+}
+
+div.dataTables_wrapper table.table-list thead th:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 4px;
+    background-color: #000;
+    opacity: 0;
+    z-index: -1;
+}
+
+div.dataTables_wrapper table.table-list thead th:nth-child(even):before {
+    opacity: 0.1;
+}
+
+div.dataTables_wrapper table.table-list thead th,
+div.dataTables_wrapper table.table-list thead th:nth-child(even) {
+    border-color: #119ee6;
+}
+
+div.dataTables_wrapper table.table-list tr:first-child td {
+    border-top-width: 0;
+}
+
+.dataTables_wrapper .dataTables_filter label input.form-control {
+	height: auto;
+    margin-top: 4px;
+    background-position: 10px center;
+}
+
+@media screen and (max-width: 600px) {
+	div.dataTables_wrapper div.dataTables_info {
+		padding-bottom: 60px !important;
+	}
+
+	.dataTables_wrapper .dataTables_filter {
+		margin-top: 60px;
+	}
+	
+	div.dataTables_wrapper .dataTables_filter label .form-control {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	div.dataTables_wrapper table.table-list thead th,
+	div.dataTables_wrapper table.table-list tbody td {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	div.dataTables_wrapper table.table-list thead th:nth-child(3),
+	div.dataTables_wrapper table.table-list thead th:nth-child(4),
+	div.dataTables_wrapper table.table-list tbody td:nth-child(3),
+	div.dataTables_wrapper table.table-list tbody td:nth-child(4) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	div.dataTables_wrapper table.table-list thead th:nth-child(5),
+	div.dataTables_wrapper table.table-list tbody td:nth-child(5) {
+		display: none;
+	}
+}
+
+/* ##. BRANDING */
+.main-content > p:last-child[style="text-align:center;"] {
+    display: none;
+}
+
+/*------------------------------------*\
+    2. HEADER SECTION
+\*------------------------------------*/
+#header {
+    border-top: 1px solid #e9e9e9;
+}
+
+ul.top-nav {
+	margin-top: 0;
+}
+
+ul.top-nav > li.primary-action > a.btn {
+    background-color: #119ee6;
+	border-radius: 20px;
+    box-shadow: none;
+    transition: color .25s, background-color .25s ease-in-out;
+}
+
+/*------------------------------------*\
+    3. MAIN MENU SECTION
+\*------------------------------------*/
+.navbar-main {
+    border-radius: 0;
+}
+
+.navbar-main .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-main .navbar-toggle:focus,
+.navbar-main .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-main .navbar-nav > li > a {
+    -webkit-transition: color .25s, background-color .25s ease-in-out, border-color .25s;
+            transition: color .25s, background-color .25s ease-in-out, border-color .25s;
+}
+
+.navbar-main .navbar-nav > li > a:hover,
+.navbar-main .navbar-nav > li > a:focus,
+.navbar-main .navbar-nav > .active > a,
+.navbar-main .navbar-nav > .active > a:hover,
+.navbar-main .navbar-nav > .active > a:focus,
+.navbar-main .navbar-nav > .open > a,
+.navbar-main .navbar-nav > .open > a:hover,
+.navbar-main .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #202736;
+}
+
+.navbar-main .dropdown-menu a {
+    -webkit-transition: color .25s, background-color .25s ease-in-out, border-color .25s;
+            transition: color .25s, background-color .25s ease-in-out, border-color .25s;
+}
+
+/*------------------------------------*\
+    4. HOME BANNER SECTION
+\*------------------------------------*/
+section#home-banner {
+    padding: 100px 0;
+    background-color: #202736;
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+section#home-banner h2 {
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+#home-banner input.form-control,
+#home-banner input[type="submit"] {
+    margin: 0;
+    box-shadow: none;
+    outline: 0;
+}
+
+#home-banner input.form-control {
+    border-right-width: 0;
+}
+
+/*------------------------------------*\
+    5. HOME SHORTCUTS SECTION
+\*------------------------------------*/
+.home-shortcuts li,
+.home-shortcuts li:first-child {
+    border-color: #fff;
+}
+
+.home-shortcuts li {
+    padding: 20px 0;
+}
+
+.home-shortcuts .lead {
+    margin-top: 17px;
+}
+
+/*------------------------------------*\
+    6. MAIN BODY SECTION
+\*------------------------------------*/
+#main-body a.label:hover {
+    color: #fff; /* Reset the anchor label color */
+}
+
+#main-body a.btn-default {
+    color: #333;
+}
+
+#main-body a.btn:hover {
+    color: #fff; /* Reset the anchor button color */
+}
+
+#main-body a.list-group-item:focus,
+#main-body a.list-group-item:hover {
+    color: #555; /* Reset the anchor list group item color */
+}
+
+#main-body .list-group-item.active,
+#main-body .list-group-item.active:focus,
+#main-body .list-group-item.active:hover {
+    color: #fff;
+}
+
+#main-body .list-group-item.active .fa {
+	color: #fff !important;
+}
+
+div.header-lined h1 {
+    color: #202736; /* Set the header lined color */
+}
+
+div.header-lined small {
+    color: #777; /* Reset the header lined small tag color */
+}
+
+.announcement-single .title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+/* 6.1. DOMAIN PRICING */
+.domain-pricing {
+    margin-bottom: 10px;
+}
+
+.domain-pricing img {
+    max-width: 100%;
+    height: auto;
+}
+
+.domain-pricing > h4:first-child {
+    margin: 0 0 15px;
+    color: #222;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.domain-pricing .tld-filters {
+    margin: -10px -5px 15px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.domain-pricing .tld-filters .label {
+    display: inline-block;
+    margin: 10px 5px 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.domain-pricing .tld-pricing-header {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-weight: 400;
+}
+
+.domain-pricing .tld-pricing-header .col-sm-4,
+.domain-pricing .tld-pricing-header .col-xs-4 {
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.domain-pricing .tld-pricing-header .col-sm-4,
+.domain-pricing .tld-pricing-header .col-xs-4 {
+    background-color: transparent;
+}
+
+.domain-pricing .tld-pricing-header div.col-sm-4,
+.domain-pricing .tld-pricing-header div.col-xs-4 {
+    border-color: #119ee6;
+}
+
+.domain-pricing .tld-row {
+    margin: 0;
+    padding: 0;
+}
+
+.domain-pricing .tld-row .row {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.domain-pricing .tld-row.highlighted {
+    background-color: #f5f5f5;
+}
+
+.domain-pricing .tld-row strong {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.domain-pricing .two-row-center {
+    border-color: #ddd;
+}
+
+/* 6.2. SIDEBAR */
+.sidebar .panel {
+    border: 1px solid #eee;
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.sidebar .panel-heading {
+    background-color: #f0f0f0 !important;
+    border-color: #f0f0f0;
+    border-radius: 0;
+	cursor: pointer;
+}
+
+.sidebar .panel-title {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.sidebar .panel-title .fa-chevron-up {
+    margin-top: 3px;
+}
+
+.sidebar .panel-heading.active .fa-chevron-up:before {
+    content: "\f078";
+}
+
+.sidebar .list-group .list-group-item {
+    border-color: #eee;
+}
+
+.sidebar .panel-footer .col-xs-6 .btn-block {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*------------------------------------*\
+    7. LOGIN SECTION
+\*------------------------------------*/
+#login.btn {
+    padding: 6px 12px; /* Reset the login button padding */
+}
+
+#login.btn {
+	padding-left: 30px;
+	padding-right: 30px;
+    color: #fff;
+	background-color: #119ee6;
+}
+
+/*------------------------------------*\
+    8. OTHER
+\*------------------------------------*/
+#order-standard_cart .addon-products .panel-addon-selected {
+    border-color: #119ee6;
+}
+
+#order-standard_cart .addon-products .panel-addon-selected .panel-price {
+    background-color: #119ee6;
+}
+
+#order-standard_cart .addon-products .panel-addon .panel-add {
+    background-color: #119ee6;
+}
+
+#order-standard_cart .addon-products .panel-addon-selected .panel-add {
+    background-color: #ebccd1;
+}
+
+#order-standard_cart div.view-cart-items {
+	border-color: #119ee6;
+}
+
+#order-standard_cart .empty-cart button.btn {
+    background-color: #119ee6;
+	text-decoration: none;
+}
+
+#order-standard_cart .order-summary a.btn-continue-shopping {
+    padding: 15px 0 5px;
+    color: #222;
+    font-size: 14px;
+}
+
+#order-standard_cart .order-summary a.btn-continue-shopping:hover {
+    color: #119ee6;
+}
+
+/*------------------------------------*\
+    9. MEDIA QUERIES
+\*------------------------------------*/
+@media screen and (max-width: 991px) {
+	.navbar-main .nav:last-child {
+		margin-bottom: 10px;
+	}
+	
+	.navbar-main .dropdown > .dropdown-menu {
+		position: relative;
+		float: none;
+		box-shadow: none;
+		background-color: transparent;
+		border: 0;
+	}
+	
+	.navbar-main .dropdown > .dropdown-menu > li > a {
+		padding-left: 30px;
+		padding-right: 30px;
+		color: #fff !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.home-shortcuts ul:after {
+		clear: both;
+	}
+	
+	.home-shortcuts ul:before,
+	.home-shortcuts ul:after {
+		content: " ";
+		display: table;
+	}
+	
+	.home-shortcuts li {
+		float: left;
+		width: 50%;
+	}
+	
+	.home-shortcuts li + li + li {
+		border-bottom-width: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.home-shortcuts li {
+		width: 100%;
+	}
+	
+	.home-shortcuts li + li + li {
+		border-bottom-width: 1px;
+	}
+}
+
+/*------------------------------------*\
+    10. LANDING PAGE
+\*------------------------------------*/
+/* 10.1. PRICING */
+.landing-page .get-started h2,
+.landing-page .get-started h4,
+.landing-page .get-started label {
+    color: #fff;
+}
+
+.landing-page .get-started .choose-product .btn {
+    margin: 10px 0 0;
+    padding: 10px 20px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 0 1px 0 0;
+    box-shadow: none;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.landing-page .get-started .choose-product .btn:before {
+    display: none;
+}
+
+.landing-page .get-started .choose-product .btn:last-child {
+    border-right-width: 0;
+}
+
+.landing-page .get-started .choose-product .btn:hover,
+.landing-page .get-started .choose-product .btn.active {
+    background-color: #e6e6e6;
+}
+
+.landing-page .get-started .btn.btn-order-now {
+	padding: 8px 25px 9px;
+	color: #333;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: background-color .25s ease-in-out;
+    outline: 0;
+}
+
+.landing-page .product-options div.price {
+    margin: 20px 0;
+}
+
+.landing-page .pricing .cycle-change {
+    box-shadow: none;
+    transition: background-color .25s ease-in-out;
+}
+
+/* 10.2. FAQ */
+.landing-page #faq {
+    margin: 0;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+/*------------------------------------*\
+    11. ORDER PAGE
+\*------------------------------------*/
+/* 11.1. PANEL SIDEBAR: LIST GROUP */
+.panel-sidebar a.list-group-item .fa {
+    transition: color .25s;
+}
+
+.panel-sidebar a.list-group-item.active,
+.panel-sidebar a.list-group-item.active:focus,
+.panel-sidebar a.list-group-item.active:hover {
+	background-color: #119ee6;
+	border-color: #119ee6;
+}
+
+/* 11.2. DOMAIN SELECTION OPTIONS */
+.suggested-domains div.panel-heading {
+	border-color: #119ee6;
+}
+
+/* 11.3. SUMMERY */
+#order-standard_cart div.order-summary {
+	background-color: #119ee6;
+	border-color: #119ee6;
+}
+
+#order-standard_cart div.summary-container {
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#order-standard_cart div.summary-container .total-due-today {
+    margin-top: 18px;
+}
+
+#order-standard_cart div.summary-container .total-due-today .amt {
+    margin-bottom: 8px;
+}
+
+/* 11.4. VIEW CART ITEMS */
+.view-cart-items .item-title .btn-link {
+    color: #222;
+    text-decoration: none;
+}
+
+#order-standard_cart .view-cart-items .btn-link:hover {
+	color: #119ee6;
+}
+
+#order-standard_cart .view-cart-items div.item,
+#order-standard_cart .view-cart-items .item-price span.cycle {
+    font-size: 14px;
+}
+
+#order-standard_cart .view-cart-items span.item-title {
+    font-size: 1.4em;
+}
+
+#order-standard_cart .promo-banner {
+	border-color: #119ee6;
+}
+
+#order-standard_cart .promo-banner button.btn {
+	background-color: #119ee6;
+}

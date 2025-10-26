@@ -1,0 +1,2487 @@
+/*
+
+[Main Stylesheet]
+
+Project: HostLooks - Responsive Hosting HTML Template
+Version: 1.4
+Author : themelooks.com
+
+
+NOTE:
+------
+PLEASE DO NOT EDIT THIS CSS, YOU MAY NEED TO USE "custom.css" FILE FOR WRITING YOUR CUSTOM CSS.
+WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SAFER TO USE "custom.css".
+
+
+[TABLE OF CONTENTS]
+
+1. GENERAL STYLES
+    1.1. HEADINGS
+    1.2. LINKS
+    1.3. BUTTONS
+    1.4. FORM CONTROLS
+    1.5. PLACEHOLDER
+
+2. HELPER CLASSES
+    2.1. BACKGROUND COLOR
+    2.2. BACKGROUND IMAGE
+    2.3. BACKGROUND OVERLAY
+    2.4. MARGINS
+    2.5. PADDINGS
+    2.6. FONTS
+    2.7. FLOATS
+    2.8. RESET GUTTER
+    2.9. VERTICAL CENTERING
+
+3. COMPONENTS
+    3.1. PRELOADER
+    3.3. SECTION TITLE
+    3.4. OWL NAV
+    3.5. COMMENT ITEMS
+    3.6. COMMENT FORM
+
+4. WIDGETS
+    4.1. WIDGET TITLE
+    4.2. LINKS WIDGET
+    4.3. ABOUT WIDGET
+
+5. HEADER SECTION
+    5.1. HEADER TOPBAR
+    5.2. HEADER NAVBAR
+
+6. PAGE HEADER SECTION
+    6.1. PAGE HEADER BREADCRUMB
+    6.2. PAGE HEADER TITLE
+
+7. BANNER SECTION
+    7.1. BANNER SLIDER
+    7.2. BANNER CONTENT
+    7.3. BANNER DOWN BUTTON
+
+8. DOMAIN SEARCH SECTION
+    8.1. DOMAIN SEARCH TITLE
+    8.2. DOMAIN SEARCH PRICE
+    8.3. DOMAIN SEARCH FORM
+
+9. ABOUT DETAILS SECTION
+    9.1. ABOUT DETAILS CONTENT
+    9.2. ABOUT DETAILS IMAGE
+
+10. SERVICES SECTION
+    10.1. SERVICE IMAGE
+    10.2. SERVICE ITEM
+
+11. PRICING SECTION
+    11.1. PRICING BACKGROUND IMAGE
+    11.2. PRICING ITEM
+
+12. PRICING TABLE SECTION
+
+13. CALL TO ACTION SECTION
+
+14. FEATURES SECTION
+    14.1. FEATURE ITEM
+
+15. EXTRA FEATURES SECTION
+
+16. DOMAIN FEATURES SECTION
+    16.1. DOMAIN FEATURE ITEM
+
+17. TESTIMONIAL SECTION
+    17.1. TESTIMONIAL SLIDER
+    17.2. TESTIMONIAL ITEM
+    17.3. TESTIMONIAL CONTENT
+
+18. TEAM SECTION
+    18.1. TEAM MEMBER
+
+19. COUNTER SECTION
+
+20. SUBSCRIBE SECTION
+
+21. BLOG SECTION
+    21.1. POST ITEM
+    21.2. POST FOOTER
+    21.3. POST COMMENTS
+
+22. CONTACT SECTION
+    22.1. CONTACT MAP
+    22.2. CONTACT FORM
+    22.3. CONTACT INFO
+
+23. FOOTER SECTION
+    23.1. FOOTER WIDGETS
+    23.2. FOOTER COPYRIGHT
+    23.3. BACK TO TOP BUTTON
+
+24. WHMCS
+
+*/
+
+/*------------------------------------*\
+    1. GENERAL STYLES
+\*------------------------------------*/
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+body {
+    color: #696969;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+p:last-child { /* RESET MARGIN OF LAST P TAG */
+    margin-bottom: 0;
+}
+
+img { /* RESPONSIVE IMAGES */
+    max-width: 100%;
+    height: auto;
+}
+
+textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #119ee6;
+}
+::selection {
+    color: #fff;
+    background-color: #119ee6;
+}
+
+.nav li a:hover,
+.nav li a:focus,
+.nav li.open a,
+.nav li.open a:hover,
+.nav li.open a:focus {
+    background-color: transparent; /* RESET NAV HOVER AND FOCUS BACKGROUND COLOR */
+}
+
+/* 1.1. HEADINGS */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    color: #393939;
+    text-transform: uppercase;
+}
+
+.bg--overlay h1, .bg--overlay .h1,
+.bg--overlay h2, .bg--overlay .h2,
+.bg--overlay h3, .bg--overlay .h3,
+.bg--overlay h4, .bg--overlay .h4,
+.bg--overlay h5, .bg--overlay .h5,
+.bg--overlay h6, .bg--overlay .h6 {
+    color: #fff;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    font-weight: 600;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-weight: 500;
+}
+
+h1, .h1 { font-size: 45px; line-height: 55px; }
+h2, .h2 { font-size: 30px; line-height: 40px; }
+h3, .h3 { font-size: 24px; line-height: 34px; }
+h4, .h4 { font-size: 18px; line-height: 28px; }
+h5, .h5 { font-size: 16px; line-height: 26px; }
+h6, .h6 { font-size: 14px; line-height: 24px; }
+
+/* 1.2. LINKS */
+a {
+    color: inherit;
+    -webkit-transition: color .25s, border-color .25s, background-color .25s ease-in-out;
+            transition: color .25s, border-color .25s, background-color .25s ease-in-out;
+}
+a:hover,
+a:focus {
+    color: #119ee6;
+}
+
+a, .btn-link,
+a:link, .btn-link:link,
+a:visited, .btn-link:visited,
+a:hover, .btn-link:hover,
+a:active, .btn-link:active {
+    text-decoration: none;
+    outline: 0;
+}
+
+/* 1.3. BUTTONS */
+.btn {
+    padding: 8px 30px 6px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    -webkit-transition-property: color, border-color, background-color;
+    transition-property: color, border-color, background-color;
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-transition-timing-function: ease, ease, ease-in-out;
+            transition-timing-function: ease, ease, ease-in-out;
+}
+
+.btn.active,
+.btn:active {
+    box-shadow: none; /* RESET BUTTON BOX SHADOW */
+}
+
+.btn:focus,
+.btn.focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn.focus {
+    outline: 0; /* RESET BUTTON OUTLINE */
+}
+
+.btn-default {
+    color: #393939;
+    background-color: transparent;
+    border-color: #119ee6;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:active:focus,
+.btn-default:active.focus,
+.btn-default.active,
+.btn-default.active:hover,
+.btn-default.active:focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default.focus {
+    color: #fff;
+    background-color: #119ee6;
+    border-color: #119ee6;
+}
+
+.bg--overlay .btn-default { color: #fff; }
+
+.bg--overlay-color .btn-default { border-color: #fff; }
+
+.bg--overlay .btn-default:hover,
+.bg--overlay .btn-default:focus,
+.bg--overlay .btn-default.focus,
+.bg--overlay .btn-default:active,
+.bg--overlay .btn-default:active:hover,
+.bg--overlay .btn-default:active:focus,
+.bg--overlay .btn-default:active.focus,
+.bg--overlay .btn-default.active,
+.bg--overlay .btn-default.active:hover,
+.bg--overlay .btn-default.active:focus,
+.bg--overlay .btn-default.active.focus,
+.bg--overlay .open > .dropdown-toggle.btn-default,
+.bg--overlay .open > .dropdown-toggle.btn-default:hover,
+.bg--overlay .open > .dropdown-toggle.btn-default:focus,
+.bg--overlay .open > .dropdown-toggle.btn-default.focus {
+    color: #119ee6;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-primary {
+    color: #119ee6;
+    background-color: transparent;
+    border-color: #119ee6;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.open > .dropdown-toggle.btn-primary,
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #119ee6;
+    border-color: #119ee6;
+}
+
+/* 1.4. FORM CONTROLS */
+.form-control {
+    height: 40px;
+    padding: 9px 30px;
+    color: #222;
+    background-color: transparent;
+    border-color: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: none;
+    outline: 0;
+}
+
+.bg--overlay .form-control {
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: #119ee6;
+    box-shadow: none;
+}
+
+.bg--overlay .form-control:focus {
+    border-color: #fff;
+}
+
+/* 1.5. PLACEHOLDER */
+.bg--overlay ::-webkit-input-placeholder { color: #fff; }
+
+.bg--overlay ::-moz-placeholder { color: #fff; }
+
+.bg--overlay :-ms-input-placeholder { color: #fff; }
+
+.bg--overlay :-moz-placeholder { color: #fff; }
+
+/*------------------------------------*\
+    2. HELPER CLASSES
+\*------------------------------------*/
+/* 2.1. BACKGROUND COLOR */
+.bg--color-lightgrey {
+    background-color: #f8f8f8;
+}
+
+/* 2.2. BACKGROUND IMAGE */
+.bg--img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 2.3. BACKGROUND OVERLAY */
+.bg--overlay {
+    position: relative;
+    color: #fff;
+    z-index: 0;
+}
+.bg--overlay:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    z-index: -1;
+}
+
+.bg--overlay-color:before { background-color: #119ee6; }
+
+.bg--overlay-opacity-95:before { opacity: 0.95; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)"; }
+
+.bg--overlay-opacity-85:before { opacity: 0.85; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; }
+
+.bg--overlay-off:before { display: none; }
+
+/* 2.4. MARGINS */
+.mleft--8 {
+    margin-left: 8px;
+}
+
+.mright--8 {
+    margin-right: 8px;
+}
+
+.mg--30 {
+    margin: 30px 0;
+}
+
+/* 2.5. PADDINGS */
+.pbottom--60 {
+    padding-bottom: 60px;
+}
+
+.pd--80-0 {
+    padding: 80px 0;
+}
+.pd--100-0 {
+    padding: 100px 0;
+}
+
+.pd--80-0-20 {
+    padding: 80px 0 20px;
+}
+.pd--100-0-40 {
+    padding: 100px 0 40px;
+}
+.pd--100-0-70 {
+    padding: 100px 0 70px;
+}
+
+/* 2.6. FONTS */
+.font--light { font-weight: 300; }
+
+.font--regular { font-weight: 400; }
+
+.font--medium { font-weight: 500; }
+
+.font--semibold { font-weight: 600; }
+
+.font--bold { font-weight: 700; }
+
+/* 2.7. FLOATS */
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+.float--none {
+    float: none;
+}
+
+/* 2.8. RESET GUTTER */
+.reset--gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+.reset--gutter > [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 2.9. VERTICAL CENTERING */
+.vc--parent {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.vc--child {
+    display: table-cell;
+    vertical-align: middle;
+}
+.vc--child-bottom {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.row--vc > div {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.row--vb > div {
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+/*------------------------------------*\
+    3. COMPONENTS
+\*------------------------------------*/
+/* 3.1. PRELOADER */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #119ee6;
+    z-index: 99999 !important;
+}
+
+#preloader .spinners {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+}
+
+#preloader .spinner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: preloaderBounce 2s infinite ease-in-out;
+            animation: preloaderBounce 2s infinite ease-in-out
+}
+
+#preloader .spinner-2 {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s
+}
+
+@-webkit-keyframes preloaderBounce {
+    0%, to {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes preloaderBounce {
+    0%, to {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+/* 3.3. SECTION TITLE */
+.section--title {
+    margin-top: -6px;
+    margin-bottom: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section--title p {
+    margin-bottom: 0;
+    letter-spacing: 4px;
+}
+
+.section--title .h2 {
+    display: inline-block;
+    position: relative;
+    margin: 5px 0 0;
+    padding-bottom: 19px;
+}
+
+.section--title .h2:before {
+    content: " ";
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+    height: 1px;
+    background-color: #393939;
+}
+
+.bg--overlay .section--title .h2:before {
+    background-color: #fff;
+}
+
+.section--title .h2:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    width: 1px;
+    height: 9px;
+    margin: 0 auto;
+    background-color: #393939;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.bg--overlay .section--title .h2:after {
+    background-color: #fff;
+}
+
+/* 3.4. OWL NAV */
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -20px;
+    padding: 8px 25px;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.owl-nav .owl-next {
+    left: auto;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.owl-nav .owl-prev:before,
+.owl-nav .owl-next:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #119ee6;
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    z-index: -1;
+}
+
+.owl-nav .owl-prev:hover:before,
+.owl-nav .owl-next:hover:before {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/* 3.5. COMMENT ITEMS */
+.comment--items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.comment--items li + li {
+    margin-top: 30px;
+}
+
+.comment--items li:before,
+.comment--items li:after {
+    content: " ";
+    display: table;
+}
+
+.comment--items li:after {
+    clear: both;
+}
+
+.comment--items li ul {
+    margin: 30px 0 0;
+    padding: 0 0 0 114px;
+    list-style: none;
+}
+
+.comment--item .img {
+    float: left;
+    margin-right: 30px;
+    border: 2px solid #393939;
+    border-radius: 50%;
+}
+
+.comment--item .content {
+    padding-top: 4px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.comment--item .content .header .h4 {
+    margin: 0;
+}
+
+.comment--item .content .header p {
+    margin-top: -3px;
+    color: #999;
+    font-size: 13px;
+    line-height: 23px;
+}
+
+.comment--item .content .body {
+    color: #393939;
+}
+
+.comment--item .content .header + .body {
+    margin-top: 10px;
+}
+
+.comment--item .action {
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.comment--item .content .body + .action {
+    margin-top: 15px;
+}
+
+/* 3.6. COMMENT FORM */
+.comment--items + .comment--form {
+    margin-top: 94px;
+}
+
+.comment--form-title {
+    margin: 0 0 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.comment--form .form-group {
+    margin-bottom: 20px;
+}
+
+.comment--form ::-webkit-input-placeholder { color: #333; text-transform: uppercase; }
+
+.comment--form ::-moz-placeholder { color: #333; text-transform: uppercase; }
+
+.comment--form :-ms-input-placeholder { color: #333; text-transform: uppercase; }
+
+.comment--form :-moz-placeholder { color: #333; text-transform: uppercase; }
+
+.comment--form .form-control {
+    border-color: #e0e0e0;
+}
+
+/*------------------------------------*\
+    4. WIDGETS
+\*------------------------------------*/
+/* 4.1. WIDGET TITLE */
+.widget--title .h4 {
+    position: relative;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.widget--title .h4:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100px;
+    height: 1px;
+    background-color: #393939;
+}
+
+.widget--title .h4:after {
+    content: " ";
+    position: absolute;
+    left: 50px;
+    bottom: -4px;
+    width: 1px;
+    height: 9px;
+    background-color: #393939;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+/* 4.2. LINKS WIDGET */
+.links--widget .nav li + li {
+    margin-top: 6px;
+}
+
+.links--widget .nav li a {
+    display: inline-block;
+    padding: 0;
+}
+
+.links--widget .nav li .fa {
+    color: #119ee6;
+}
+
+/* 4.3. ABOUT WIDGET */
+.about--widget .nav li + li {
+    margin-top: 6px;
+}
+
+.about--widget .nav li a,
+.about--widget .nav li span {
+    display: inline-block;
+    padding: 0;
+}
+
+.about--widget .nav li .icon {
+    color: #119ee6;
+}
+
+/*------------------------------------*\
+    5. HEADER SECTION
+\*------------------------------------*/
+/* 5.1. HEADER TOPBAR */
+.header--topbar {
+    color: #fff;
+    background-color: #222;
+}
+
+.header--topbar .nav li {
+    float: left;
+}
+
+.header--topbar .nav li a {
+    padding: 8px 0;
+}
+
+.header--topbar .info {
+    margin-left: -26px;
+    margin-right: -26px;
+}
+
+.header--topbar .info li a {
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+.header--topbar .info li a:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.header--topbar .info li:first-child a:before {
+    display: none;
+}
+
+.header--topbar .info li a .icon {
+    color: #119ee6;
+    margin-right: 8px;
+}
+
+.header--topbar .register li a {
+    padding-right: 9px;
+}
+
+.header--topbar .register li:last-child a {
+    padding-right: 0;
+}
+
+.header--topbar .register li a:after {
+    content: "|";
+    padding-left: 9px;
+    color: #484848;
+    font-size: 11px;
+    line-height: 21px;
+}
+
+.header--topbar .register li:last-child a:after {
+    display: none;
+}
+
+.header--topbar .register + .social {
+    margin-right: 25px;
+    padding-right: 25px;
+    border-right: 1px solid #393939;
+}
+
+.header--topbar .social {
+    color: #f1f1f1;
+}
+
+.header--topbar .social li {
+    margin-right: 18px;
+}
+
+.header--topbar .social li:last-child {
+    margin-right: 0;
+}
+
+/* 5.2. HEADER NAVBAR */
+.header--navbar {
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.header--navbar > .container {
+    position: relative;
+}
+
+.header--navbar .navbar-brand {
+    height: auto;
+}
+
+.header--navbar .navbar-toggle {
+    padding: 12px 11px;
+    background-color: #119ee6;
+    border-color: #119ee6;
+    border-radius: 8px;
+    -webkit-transition: border-color .25s, background-color .25s ease-in-out;
+    transition: border-color .25s, background-color .25s ease-in-out;
+}
+
+.header--navbar .navbar-toggle .icon-bar {
+    background-color: #fff;
+    -webkit-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+}
+
+.header--navbar .navbar-toggle.collapsed {
+    background-color: transparent;
+    border-color: #393939;
+}
+
+.header--navbar .navbar-toggle.collapsed .icon-bar {
+    background-color: #393939;
+}
+
+.header--navbar .navbar-collapse {
+    padding-right: 30px;
+}
+
+.header-nav--links {
+    color: #393939;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header-nav--links > li.active > a {
+    color: #119ee6;
+}
+
+.header--navbar .navbar-form {
+    position: absolute;
+    right: 30px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: -15px;
+    padding-right: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.header--navbar .navbar-form .form-control {
+    height: 36px;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    color: #222;
+    background-color: transparent;
+    border-right-width: 0;
+    border-color: transparent;
+    border-radius: 18px 0 0 18px;
+    box-shadow: none;
+    -webkit-transition-property: padding, background, border;
+    transition-property: padding, background, border;
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+}
+
+.header--navbar .navbar-form:hover .form-control {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f2f2f2;
+    border-color: #eaeaea;
+}
+
+.header--navbar .navbar-form button {
+    padding: 5px 0;
+    color: #393939;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0 18px 18px 0;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-transition-property: color, padding, background, border;
+    transition-property: color, padding, background, border;
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-transition-timing-function: ease, ease-in-out, ease-in-out;
+            transition-timing-function: ease, ease-in-out, ease-in-out;
+    vertical-align: middle;
+    outline: 0;
+}
+
+.header--navbar .navbar-form:hover button {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #119ee6;
+    background-color: #f9f9f9;
+    border-color: #eaeaea;
+}
+
+/*------------------------------------*\
+    6. PAGE HEADER SECTION
+\*------------------------------------*/
+/* 6.1. PAGE HEADER BREADCRUMB */
+.page-header--breadcrumb {
+    margin-top: -6px;
+}
+
+.page-header--breadcrumb .breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.page-header--breadcrumb .breadcrumb li.active {
+    color: #119ee6;
+}
+
+/* 6.2. PAGE HEADER TITLE */
+.page-header--title .h2 {
+    margin: 5px 0 -12px;
+}
+
+/*------------------------------------*\
+    7. BANNER SECTION
+\*------------------------------------*/
+.banner--section {
+    position: relative;
+    z-index: 0;
+}
+
+.banner--section,
+.banner--item {
+    height: 100%;
+}
+
+/* 7.1. BANNER SLIDER */
+.banner--slider,
+.banner--slider .owl-stage-outer,
+.banner--slider .owl-stage,
+.banner--slider .owl-item {
+    height: 100%;
+}
+
+/* 7.2. BANNER CONTENT */
+.banner--content .title .h1 {
+    margin: 0;
+}
+
+.banner--content .title .h1 span {
+    color: #119ee6;
+}
+
+.banner--content .body {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.banner--content .title + .body {
+    margin-top: 10px;
+}
+
+.banner--content .buttons {
+    font-size: 0;
+    line-height: 0;
+}
+
+.banner--content .body + .buttons {
+    margin-top: 17px;
+}
+
+.banner--content .buttons .btn {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* 7.3. BANNER DOWN BUTTON */
+.banner--down-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    margin-left: -20px;
+    z-index: 1;
+}
+
+.banner--down-btn a {
+    display: block;
+    position: relative;
+    padding: 24px 17px 12px;
+    color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.banner--down-btn a:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #119ee6;
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+    z-index: -1;
+}
+
+.banner--down-btn a:hover:before {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*------------------------------------*\
+    8. DOMAIN SEARCH SECTION
+\*------------------------------------*/
+/* 8.1. DOMAIN SEARCH TITLE */
+.domain-search--title .h2 {
+    margin: -7px 0 0;
+}
+
+.domain-search--title .h2 + p {
+    margin-top: 3px;
+}
+
+/* 8.2. DOMAIN SEARCH PRICE */
+.domain-search--price {
+    margin-bottom: 6px;
+}
+
+.domain-search--title + .domain-search--price {
+    margin-top: 32px;
+}
+
+.domain-search--price ul {
+    font-size: 0;
+    line-height: 0;
+}
+
+.domain-search--price li {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.domain-search--price li:after {
+    content: "|";
+    margin: 0 28px;
+}
+
+.domain-search--price li:last-child:after {
+    display: none;
+}
+
+.domain-search--price li strong {
+    font-weight: 600;
+}
+
+/* 8.3. DOMAIN SEARCH FORM */
+.domain-search--form .input-group-addon {
+    padding: 0 20px;
+    background-color: transparent;
+    border-color: #f2f2f2;
+    border-radius: 0 20px 20px 0;
+}
+
+.domain-search--form .input-group-addon select {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+}
+
+.domain-search--form .input-group-addon option {
+    color: #222;
+}
+
+.domain-search--form .btn-default {
+    margin-top: 20px;
+    border-color: #fff;
+}
+
+/*------------------------------------*\
+    9. ABOUT DETAILS SECTION
+\*------------------------------------*/
+/* 9.1. ABOUT DETAILS CONTENT */
+.about-details--content .title {
+    margin: -6px 0 0;
+}
+
+.about-details--content .subtitle {
+    margin-bottom: 19px;
+    color: #393939;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.about-details--content .title + .subtitle {
+    margin-top: 15px;
+}
+
+.about-details--content ul {
+    margin-top: 21px;
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.about-details--content ul li {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.about-details--content ul li .fa {
+    margin-right: 20px;
+    color: #119ee6;
+}
+
+.about-details--content .buttons {
+    font-size: 0;
+    line-height: 0;
+}
+
+.about-details--content .buttons .btn {
+    margin-top: 21px;
+    margin-right: 20px;
+}
+
+/* 9.2. ABOUT DETAILS IMAGE */
+.about-details--img .inner {
+    position: relative;
+    margin: 10px 10px 0 0;
+    z-index: 0;
+}
+
+.about-details--img .inner:before {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #119ee6;
+    z-index: -1;
+}
+
+.about-details--img img {
+    width: 100%;
+}
+
+/*------------------------------------*\
+    10. SERVICES SECTION
+\*------------------------------------*/
+/* 10.1. SERVICE IMAGE */
+.service--img {
+    float: none;
+    display: inline-block;
+}
+
+/* 10.2. SERVICE ITEM */
+.service--item + .service--item {
+    margin-top: 36px;
+}
+
+.service--item-right {
+    text-align: right;
+}
+
+.service--item .title {
+    position: relative;
+    min-height: 50px;
+}
+
+.service--item .title .icon {
+    float: left;
+    width: 50px;
+    margin-right: 20px;
+    color: #119ee6;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    -webkit-transition: color .25s, border-color .25s, background-color .25s ease-in-out;
+    transition: color .25s, border-color .25s, background-color .25s ease-in-out;
+}
+
+.service--item-right .title .icon {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.service--item:hover .title .icon {
+    color: #fff;
+    background-color: #119ee6;
+    border-color: #119ee6;
+}
+
+.service--item .title .h4 {
+    margin: 10.5px 0;
+    color: #444;
+    overflow: hidden;
+}
+
+.service--item .content {
+    color: #666;
+}
+
+.service--item .title + .content {
+    margin-top: 14px;
+}
+
+/*------------------------------------*\
+    11. PRICING SECTION
+\*------------------------------------*/
+.pricing--section {
+    position: relative;
+    z-index: 0;
+}
+
+.pricing--section .section--title,
+.pricing--section .section--title .h2 {
+    color: #fff;
+}
+
+.pricing--section .section--title .h2:before,
+.pricing--section .section--title .h2:after {
+    background-color: #fff;
+}
+
+.pricing--section .row > div {
+    position: static;
+}
+
+/* 11.1. PRICING BACKGROUND IMAGE */
+.pricing--bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* 11.2. PRICING ITEM */
+.pricing--item {
+    margin-bottom: 60px;
+    -webkit-transition: box-shadow .25s ease-in-out;
+    transition: box-shadow .25s ease-in-out;
+    text-align: center;
+}
+
+.pricing--item:hover,
+.pricing--item.active {
+    box-shadow: 0 5px 25px rgba(17, 158, 230, 0.2);
+}
+
+.pricing--item .header {
+    position: relative;
+    color: #fff;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    border-color: transparent;
+    -webkit-transition: border-color .25s;
+    transition: border-color .25s;
+    z-index: 0;
+}
+
+.pricing--item:hover .header,
+.pricing--item.active .header {
+    border-color: #119ee6;
+}
+
+.pricing--item .header:before {
+    content: " ";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background-color: #119ee6;
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    z-index: -1;
+}
+
+.pricing--item .header .h5 {
+    position: relative;
+    margin: 0;
+    padding: 33px 20px 22px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing--item .header .h5:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    width: 1px;
+    height: 9px;
+    margin: 0 auto;
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.pricing--item .header .price {
+    padding: 27px 20px 12px;
+}
+
+.pricing--item .header .price strong {
+    font-size: 36px;
+    line-height: 36px;
+    vertical-align: top;
+}
+
+.pricing--item .features {
+    background-color: #fff;
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: #f2f2f2;
+    -webkit-transition: border-color .25s;
+    transition: border-color .25s;
+}
+
+.pricing--item:hover .features,
+.pricing--item.active .features {
+    border-color: #119ee6;
+}
+
+.pricing--item .features ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pricing--item .features ul li {
+    padding: 14px 20px 16px;
+    color: #393939;
+    font-weight: 400;
+}
+
+.pricing--item .features ul li:nth-child(2n) {
+    background-color: #f5f5f5;
+}
+
+.pricing--item .features ul li:nth-child(2n):last-child {
+    margin-bottom: 20px;
+}
+
+.pricing--item .action {
+    padding: 20px 0 40px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    border-color: #f2f2f2;
+    -webkit-transition: border-color .25s;
+    transition: border-color .25s;
+}
+
+.pricing--item:hover .action,
+.pricing--item.active .action {
+    border-color: #119ee6;
+}
+
+.pricing--item .action .btn {
+    -webkit-transition-property: color, border-color, background-color, box-shadow;
+    transition-property: color, border-color, background-color, box-shadow;
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-transition-timing-function: ease, ease, ease-in-out, ease-in-out;
+            transition-timing-function: ease, ease, ease-in-out, ease-in-out;
+}
+
+.pricing--item:hover .action .btn,
+.pricing--item.active .action .btn {
+    color: #fff;
+    background-color: #119ee6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*------------------------------------*\
+    12. PRICING TABLE SECTION
+\*------------------------------------*/
+.pricing-table {
+    position: relative;
+    margin: -10px -30px;
+    z-index: 0;
+}
+
+.pricing-table:before {
+    content: " ";
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    right: 30px;
+    height: 72px;
+    background: -webkit-linear-gradient(#119ee6 100%, transparent 100%);
+    background: linear-gradient(#119ee6 100%, transparent 100%);
+    border-radius: 25px 25px 0 0;
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    z-index: -1;
+}
+
+.pricing-table:after {
+    content: " ";
+    position: absolute;
+    top: 82px;
+    left: 30px;
+    right: 30px;
+    bottom: 10px;
+    background: url(img/pricing-table-img/white-stripe.png);
+    border-radius: 0 0 6px 6px;
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    z-index: -1;
+}
+
+.pricing-table .table {
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 30px 10px;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.pricing-table .table thead tr th,
+.pricing-table .table tbody tr td {
+    padding: 0;
+    border: 0;
+}
+
+.pricing-table .table thead tr th {
+    padding: 23px 20px 21px;
+    color: #fff;
+    background-color: #119ee6;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pricing-table .table thead tr th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.pricing-table .table thead tr th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.pricing-table .table tbody tr td {
+    padding: 10px;
+    color: #333;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    line-height: 26px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.pricing-table .table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 2px;
+}
+
+.pricing-table .table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 2px;
+}
+
+.pricing-table .table tbody tr td .btn {
+    width: 100%;
+    max-width: 126px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*------------------------------------*\
+    13. CALL TO ACTION SECTION
+\*------------------------------------*/
+.call-to-action--section {
+    padding: 73px 0 76px;
+}
+
+.cta--content .h2 {
+    margin: 0 0 3px;
+}
+
+.call-to-action--section.text-center .cta--content .h2 {
+    margin-bottom: 8px;
+}
+
+.call-to-action--section.text-center .cta--action {
+    margin-top: 17px !important;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.call-to-action--section.bg--overlay:not(.bg--overlay-color) .cta--action .btn-default {
+    border-color: #fff;
+}
+
+/*------------------------------------*\
+    14. FEATURES SECTION
+\*------------------------------------*/
+/* 14.1. FEATURE ITEM */
+.feature--item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.feature--item .img {
+    float: left;
+    margin-right: 30px;
+}
+
+.feature--item-right .img {
+    float: right;
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+.feature--item .content {
+    margin-top: 13px;
+    overflow: hidden;
+}
+
+.feature--item .content .h4 {
+    margin: 0;
+    color: #444;
+}
+
+.feature--item .content p {
+    color: #555;
+}
+
+/*------------------------------------*\
+    15. EXTRA FEATURES SECTION
+\*------------------------------------*/
+.extra-feature--img img {
+    width: 100%;
+}
+
+.about-details--section + .extra-features--section {
+    border-top: 1px solid #e5e5e5;
+}
+
+.extra-feature--items .panel-group {
+    margin-bottom: 0;
+}
+
+.extra-feature--item {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.extra-feature--item + .extra-feature--item {
+    margin-top: 1px !important;
+}
+
+.extra-feature--item .panel-heading {
+    padding: 0;
+    color: #fff;
+    background-color: #119ee6;
+    border-radius: 25px;
+}
+
+.extra-feature--item .panel-title {
+    line-height: 28px;
+}
+
+.extra-feature--item .panel-heading a {
+    position: relative;
+    display: block;
+    padding: 12px 40px 11px 25px;
+    color: #fff;
+    z-index: 0;
+}
+
+.extra-feature--item .panel-heading a:before {
+    content: "\f068";
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    margin-top: -12px;
+    font-family: "FontAwesome", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    z-index: -1;
+}
+
+.extra-feature--item .panel-heading a.collapsed:before {
+    content: "\f067";
+}
+
+.extra-feature--item .panel-body {
+    padding: 14px 20px 12px;
+    border-top: 0 !important;
+}
+
+/*------------------------------------*\
+    16. DOMAIN FEATURES SECTION
+\*------------------------------------*/
+/* 16.1. DOMAIN FEATURE ITEM */
+.domain-feature--item {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.domain-feature--item .icon {
+    color: #119ee6;
+    width: 50px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+.domain-feature--item .icon + .title {
+    margin-top: 18px;
+}
+
+.domain-feature--item .title .h4 {
+    margin: 0;
+    color: #444;
+}
+
+.domain-feature--item .title + .content {
+    margin-top: 10px;
+}
+
+.domain-feature--item .content + .action {
+    margin-top: 22px;
+}
+
+/*------------------------------------*\
+    17. TESTIMONIAL SECTION
+\*------------------------------------*/
+/* 17.1. TESTIMONIAL SLIDER */
+.testimonial--slider {
+    padding: 0 100px;
+}
+
+.testimonial--slider .owl-nav .owl-prev,
+.testimonial--slider .owl-nav .owl-next {
+    margin-top: -30px;
+    padding: 16px 15px;
+    color: #119ee6;
+    border: 1px solid #119ee6;
+    border-radius: 20px;
+    font-size: 24px;
+    -webkit-transition: color .25s;
+    transition: color .25s;
+}
+
+.testimonial--slider .owl-nav .owl-prev:hover,
+.testimonial--slider .owl-nav .owl-next:hover {
+    color: #fff;
+}
+
+.testimonial--slider .owl-nav .owl-prev:before,
+.testimonial--slider .owl-nav .owl-next:before {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.testimonial--slider .owl-nav .owl-prev:hover:before,
+.testimonial--slider .owl-nav .owl-next:hover:before {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/* 17.2. TESTIMONIAL ITEM */
+.testimonial--img img {
+    display: block;
+    border-bottom: 1px solid #333;
+}
+
+/* 17.3. TESTIMONIAL CONTENT */
+.testimonial--content blockquote {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    border: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.testimonial--content blockquote footer {
+    position: relative;
+    margin-top: 14px;
+    padding-left: 12px;
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.testimonial--content blockquote footer:before {
+    content: " ";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    bottom: 4px;
+    width: 5px;
+    background-color: #393939;
+}
+
+.testimonial--content blockquote footer .h6 {
+    margin: 0;
+}
+
+.testimonial--content blockquote footer .h6 + p {
+    margin-top: -6px;
+}
+
+/*------------------------------------*\
+    18. TEAM SECTION
+\*------------------------------------*/
+/* 18.1. TEAM MEMBER */
+.team--member {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    -webkit-transition: box-shadow .25s ease-in-out;
+    transition: box-shadow .25s ease-in-out;
+}
+
+.team--member:hover,
+.team--member.active {
+    box-shadow: 0 0 10px rgba(17, 158, 230, 0.2);
+}
+
+.team--member .img {
+    padding: 0 20px;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.team--member .img img {
+    width: 100%;
+}
+
+.team--member .info .h6 {
+    margin: 24px 0 1px;
+}
+
+.team--member .social {
+    margin-top: 8px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+.team--member:hover .social,
+.team--member.active .social {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.team--member .social ul {
+    font-size: 0;
+    line-height: 0;
+}
+
+.team--member .social ul li {
+    display: inline-block;
+}
+
+.team--member .social ul li a {
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/*------------------------------------*\
+    19. COUNTER SECTION
+\*------------------------------------*/
+.counter--item {
+    margin-bottom: 56px;
+    color: #eee;
+    text-align: center;
+}
+
+.counter--item .icon {
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.counter--item .number {
+    position: relative;
+    margin: 20px 0 12px;
+    padding-bottom: 13px;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.counter--item .number:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    width: 50px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.counter--item .number:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.counter--item .title {
+    margin: 0;
+    color: #eee;
+    text-transform: none;
+}
+
+/*------------------------------------*\
+    20. SUBSCRIBE SECTION
+\*------------------------------------*/
+.subscribe--title + .subscribe--form {
+    margin-top: 36px;
+}
+
+.subscribe--title .h2 {
+    margin: -7px 0 0;
+}
+
+.subscribe--title p {
+    color: #f1f1f1;
+}
+
+.subscribe--form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.subscribe--form .form-group {
+    margin-bottom: 20px;
+}
+
+.subscribe--form .form-control {
+    background-color: #119ee6;
+}
+
+/*------------------------------------*\
+    21. BLOG SECTION
+\*------------------------------------*/
+/* 21.1. POST ITEM */
+.post--item {
+    margin-bottom: 30px;
+}
+
+.post--item .img {
+    position: relative;
+    background-color: #fff;
+    z-index: 0;
+}
+
+.post--item.sticky .img:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #119ee6;
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    z-index: 1;
+}
+
+.post--item:not(.post--item-single) .img img {
+    width: 100%;
+}
+
+.post--item .video {
+    background-color: #060805;
+}
+
+.post--item .video.embed-responsive {
+    padding-bottom: 56.20%;
+}
+
+.post--item .quote {
+    padding: 32px 20px;
+    color: #fff;
+    background-color: #119ee6;
+}
+
+.post--item .quote blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.post--item .quote blockquote p:before {
+    content: "\f10d";
+    margin-right: 10px;
+    font-family: "FontAwesome";
+}
+
+.post--item .quote blockquote p:after {
+    content: "\f10e";
+    margin-left: 10px;
+    font-family: "FontAwesome";
+}
+
+.post--item .slider .owl-prev,
+.post--item .slider .owl-next {
+    margin: -18px 20px 0;
+    padding: 0;
+    font-size: 36px;
+}
+
+.post--item .slider .owl-prev:before,
+.post--item .slider .owl-next:before {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.post--item .content {
+    padding: 23px 30px 30px;
+    background-color: #fff;
+}
+
+.post--item .header .h2 {
+    margin: 10px 0 14px;
+    font-weight: 500;
+}
+
+.post--item .header .h4 {
+    margin: 0;
+    text-transform: none;
+}
+
+.post--item.sticky .header .h4 {
+    color: #119ee6;
+}
+
+.post--item .header .meta {
+    color: #999;
+    font-size: 11px;
+    line-height: 21px;
+}
+
+.post--item .header .h4 + .meta {
+    margin-top: 8px;
+}
+
+.post--item .header .meta li {
+    float: left;
+}
+
+.post--item .header .meta li:after {
+    content: "|";
+    margin: 0 15px;
+}
+
+.post--item .header .meta li:last-child:after {
+    display: none;
+}
+
+.post--item .header .meta li .fa {
+    color: #119ee6;
+}
+
+.post--item .header .meta li a {
+    display: inline;
+    padding: 0;
+}
+
+.post--item .body {
+    font-size: 13px;
+    line-height: 23px;
+}
+
+.post--item .header + .body {
+    margin-top: 21px;
+}
+
+.post--item-single .body p {
+    margin-bottom: 15px;
+}
+
+.post--item-single .body p:last-child {
+    margin-bottom: 0;
+}
+
+.post--item-single .body blockquote {
+    position: relative;
+    margin: 0;
+    padding: 36px 38px 32px;
+    color: #393939;
+    background-color: #f6f6f6;
+    border-left: 1px solid #119ee6;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.post--item-single .body p + blockquote {
+    margin-top: 32px;
+}
+
+.post--item-single .body blockquote + p {
+    margin-top: 56px;
+}
+
+.post--item-single .body blockquote:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 3px;
+    height: 100%;
+    background-color: #119ee6;
+}
+
+.post--item-single .body blockquote p {
+    margin-bottom: 9px;
+}
+
+.post--item-single .body blockquote p:before {
+    content: "\f10d";
+    margin-right: 15px;
+    font-family: "FontAwesome";
+}
+
+.post--item-single .body blockquote footer {
+    color: #393939;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+}
+
+.post--item-single .body p + p img {
+    margin: 18px 0 20px;
+}
+
+.post--item .body + .action {
+    margin-top: 26px;
+}
+
+.post--item.sticky .action .btn {
+    color: #fff;
+    background-color: #119ee6;
+}
+
+/* 21.2. POST FOOTER */
+.post--footer {
+    margin-top: -30px;
+}
+
+.post--footer .title {
+    margin-bottom: 11px;
+    color: #393939;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.post--footer .social,
+.post--footer .links {
+    margin-top: 34px;
+}
+
+.post--footer .social ul {
+    margin: 0 -2.5px;
+    padding: 0;
+    list-style: none;
+}
+
+.post--footer .social ul li {
+    float: left;
+}
+
+.post--footer .social ul li .btn {
+    width: 35px;
+    margin: 0 2.5px;
+    padding: 5px 0 4px;
+    color: #696969;
+    border-color: rgba(17, 158, 230, 0.2);
+    text-align: center;
+}
+
+.post--footer .social ul li .btn:hover,
+.post--footer .social ul li .btn:focus {
+    color: #fff;
+}
+
+.post--footer .links ul {
+    margin: -10px -2.5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post--footer .links ul li {
+    float: left;
+}
+
+.post--footer .links ul li .btn {
+    margin: 10px 2.5px 0;
+    padding: 5px 20px 4px;
+    border-color: rgba(17, 158, 230, 0.2);
+    text-transform: none;
+}
+
+/* 21.3. POST COMMENTS */
+.post--comments {
+    margin-top: 35px;
+}
+
+.post--comments .title {
+    margin: 0 0 30px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.post--comments .title small {
+    display: block;
+    float: right;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    text-transform: none;
+}
+
+/*------------------------------------*\
+    22. CONTACT SECTION
+\*------------------------------------*/
+/* 22.1. CONTACT MAP */
+.contact--map {
+    margin-bottom: 54px;
+    min-height: 300px;
+}
+
+/* 22.2. CONTACT FORM */
+.contact--title {
+    margin: 0 0 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.contact--form .status .alert {
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+.contact--form ::-webkit-input-placeholder { color: #333; text-transform: uppercase; }
+
+.contact--form ::-moz-placeholder { color: #333; text-transform: uppercase; }
+
+.contact--form :-ms-input-placeholder { color: #333; text-transform: uppercase; }
+
+.contact--form :-moz-placeholder { color: #333; text-transform: uppercase; }
+
+.contact--form .form-group {
+    margin-bottom: 20px;
+}
+
+/* 22.3. CONTACT INFO */
+.contact--info .inner {
+    padding: 39px 30px 37px;
+    color: #393939;
+    border: 1px solid #f2f2f2;
+    border-radius: 22px;
+}
+
+.contact--info-item + .contact--info-item {
+    margin-top: 16px;
+}
+
+.contact--info-item .h6 {
+    margin: 0;
+    color: #119ee6;
+}
+
+.contact--info-item p {
+    margin-bottom: 0;
+}
+
+.contact--info-item .h6 + p {
+    margin-top: 7px;
+}
+
+/*------------------------------------*\
+    23. FOOTER SECTION
+\*------------------------------------*/
+.footer--section {
+    position: relative;
+    z-index: 0;
+}
+
+/* 23.1. FOOTER WIDGETS */
+.footer--section {
+    color: #fff;
+    background-color: #222;
+}
+
+.footer--widgets {
+    color: #ccc;
+}
+
+.footer--widgets .widget--logo {
+    margin-bottom: 46px;
+}
+
+.footer--widgets .widget {
+    margin-bottom: 60px;
+}
+
+.footer--widgets .widget--title {
+    margin-bottom: 40px;
+}
+
+.footer--widgets .widget--title .h4 {
+    color: #fff;
+}
+
+.footer--widgets .widget--title .h4:before {
+    background-color: #4c4c4c;
+}
+
+.footer--widgets .widget--title .h4:after {
+    background-color: #fff;
+}
+
+/* 23.2. FOOTER COPYRIGHT */
+.footer--copyright {
+    padding: 24px 0 25px;
+    border-top: 1px solid #333;
+}
+
+.footer--copyright p {
+    margin-bottom: 0;
+}
+
+.footer--copyright a {
+    color: #119ee6;
+    font-weight: 400;
+}
+
+.footer--copyright img {
+    margin-top: 3px;
+}
+
+/* 23.3. BACK TO TOP BUTTON */
+.back-to-top-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+}
+
+.back-to-top-btn a {
+    display: inline-block;
+    width: 40px;
+    margin-top: -30px;
+    padding: 6.5px 0;
+    color: #cde5f8;
+    background-color: #119ee6;
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-size: 11px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.back-to-top-btn a .fa {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/*------------------------------------*\
+    24. WHMCS
+\*------------------------------------*/
+.header-lined .breadcrumb > .active {
+    color: #119ee6;
+}
+
+.navbar-main,
+.navbar-main .dropdown-menu > li > a:hover,
+.navbar-main .dropdown-menu > li > a:focus,
+.home-shortcuts,
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus,
+.btn-success, .btn-info,
+.btn-success:hover, .btn-info:hover,
+.btn-success:focus, .btn-info:focus,
+.btn-success:active:hover, .btn-info:active:hover,
+.btn-success:active:focus, .btn-info:active:focus,
+.open > .dropdown-toggle.btn-primary, .open > .dropdown-toggle.btn-success, .open > .dropdown-toggle.btn-info,
+.dataTables_wrapper .dataTables_info,
+.dataTables_paginate .pagination > .active > a,
+.dataTables_paginate .pagination > .active > span,
+.dataTables_paginate .pagination > .active > a:hover,
+.dataTables_paginate .pagination > .active > span:hover,
+.dataTables_paginate .pagination > .active > a:focus,
+.dataTables_paginate .pagination > .active > span:focus {
+    background-color: #119ee6;
+}
+
+#order-standard_cart .view-cart-items-header {
+    background-color: #119ee6 !important;
+}
+
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus,
+.btn-success, .btn-info,
+.btn-success:hover, .btn-info:hover,
+.btn-success:focus, .btn-info:focus,
+.btn-success:active:hover, .btn-info:active:hover,
+.btn-success:active:focus, .btn-info:active:focus,
+.open > .dropdown-toggle.btn-success, .open > .dropdown-toggle.btn-info,
+.dataTables_wrapper .dataTables_info,
+.dataTables_paginate .pagination > .active > a,
+.dataTables_paginate .pagination > .active > span,
+.dataTables_paginate .pagination > .active > a:hover,
+.dataTables_paginate .pagination > .active > span:hover,
+.dataTables_paginate .pagination > .active > a:focus,
+.dataTables_paginate .pagination > .active > span:focus {
+    border-color: #119ee6;
+}
