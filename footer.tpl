@@ -61,17 +61,9 @@
 							<li>
 								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Web Hosting</a>
 							</li>
-							
+
 							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Reseller Hosting</a>
-							</li>
-							
-							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Cloud Hosting</a>
-							</li>
-							
-							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Dedicated Server</a>
+								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Domain Registration</a>
 							</li>
 						</ul>
 					</div>
@@ -93,13 +85,9 @@
 							<li>
 								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>About Us</a>
 							</li>
-							
+
 							<li>
 								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Our People</a>
-							</li>
-							
-							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Plans &amp; Pricing</a>
 							</li>
 
 							<li>
@@ -123,19 +111,7 @@
 					<div class="links--widget">
 						<ul class="nav">
 							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Product Support</a>
-							</li>
-							
-							<li>
 								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Contact Us</a>
-							</li>
-							
-							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>FAQs</a>
-							</li>
-
-							<li>
-								<a href="#"><i class="icon mright--8 fa fa-angle-double-right"></i>Live Chat</a>
 							</li>
 						</ul>
 					</div>
@@ -150,7 +126,7 @@
 	<!-- Footer Copyright Start -->
 	<div class="footer--copyright">
 		<div class="container">
-			<p class="float--left">{$date_year} &copy; Copyright Reserved To <a href="#">SJM Host</a>. Designed By <a href="http://themelooks.com/">ThemeLooks</a>.</p> <!-- Designed By Text is Required. Please, do not remove this text otherwise your website won't show. -->
+			<p class="float--left">{$date_year}</p>
 
 			<img src="{$WEB_ROOT}/templates/{$template}/img/payment-methods.png" alt="" class="float--right">
 		</div>

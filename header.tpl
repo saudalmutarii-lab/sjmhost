@@ -26,35 +26,6 @@
 
 <!-- Header Section Start -->
 <div class="header--section">
-	<!-- Header Topbar Start -->
-	<div class="header--topbar">
-		<div class="container">
-			<ul class="nav info float--left">
-				<li><a href="tel:+966574095987"><i class="icon fa fa-phone"></i>+966574095987</a></li>
-				<li class="hidden-xs"><a href="mailto:sales@sjmhost.com"><i class="icon fa fa-envelope-o"></i>sales@sjmhost.com</a></li>
-			</ul>
-
-			<ul class="nav register float--right">
-				<li>
-					{if !$loggedin}
-					<a href="{$WEB_ROOT}/clientarea.php">Login</a>
-					{else}
-					<a href="{$WEB_ROOT}/logout.php">Logout</a>
-					{/if}
-				</li>
-				<li><a href="{$WEB_ROOT}/register.php">Register</a></li>
-			</ul>
-
-			<ul class="nav social float--right hidden-xs">
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- Header Topbar End -->
 
 	<!-- Header Navbar Start -->
 	<nav class="header--navbar navbar">
@@ -178,40 +149,6 @@
     </div>
 </section>
 
-<section id="main-menu">
-
-    <nav id="nav" class="navbar navbar-default navbar-main" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="primary-nav">
-
-                <ul class="nav navbar-nav">
-
-                    {include file="$template/includes/navbar.tpl" navbar=$primaryNavbar}
-
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    {include file="$template/includes/navbar.tpl" navbar=$secondaryNavbar}
-
-                </ul>
-
-            </div><!-- /.navbar-collapse -->
-        </div>
-    </nav>
-
-</section>
 
 {if $templatefile == 'homepage'}
     <section id="home-banner" data-bg-img="{$WEB_ROOT}/templates/{$template}/img/home-banner-bg.png">
@@ -243,55 +180,6 @@
         </div>
     </section>
 
-    <div class="home-shortcuts">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 hidden-sm hidden-xs text-center">
-                    <p class="lead">
-                        {$LANG.howcanwehelp}
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-8">
-                    <ul>
-                        {if $registerdomainenabled || $transferdomainenabled}
-                            <li>
-                                <a id="btnBuyADomain" href="domainchecker.php">
-                                    <i class="fa fa-globe"></i>
-                                    <p>
-                                        {$LANG.buyadomain} <span>&raquo;</span>
-                                    </p>
-                                </a>
-                            </li>
-                        {/if}
-                        <li>
-                            <a id="btnOrderHosting" href="cart.php">
-                                <i class="fa fa-hdd-o"></i>
-                                <p>
-                                    {$LANG.orderhosting} <span>&raquo;</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a id="btnMakePayment" href="clientarea.php">
-                                <i class="fa fa-credit-card"></i>
-                                <p>
-                                    {$LANG.makepayment} <span>&raquo;</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a id="btnGetSupport" href="submitticket.php">
-                                <i class="fa fa-envelope-o"></i>
-                                <p>
-                                    {$LANG.getsupport} <span>&raquo;</span>
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 {/if}
 
 {include file="$template/includes/verifyemail.tpl"}

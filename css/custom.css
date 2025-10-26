@@ -2,7 +2,576 @@
 
     ** Custom Stylesheet **
 
-    Any custom styling you want to apply should be
-    defined here.
+    Color Scheme: White (dominant), Black (secondary), Pale Gold (accent)
 
 ***************************************************** */
+
+/* ===== COLOR SCHEME OVERRIDES ===== */
+
+/* Primary Brand Color - Pale Gold */
+:root {
+    --brand-gold: #D4AF37;
+    --brand-gold-light: #E5C66B;
+    --brand-gold-dark: #B8941F;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F8F8;
+}
+
+/* Body & Text */
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #000000;
+}
+
+/* Links */
+a:hover,
+a:focus {
+    color: #D4AF37;
+}
+
+/* Selection */
+::-moz-selection {
+    color: #FFFFFF;
+    background-color: #D4AF37;
+}
+::selection {
+    color: #FFFFFF;
+    background-color: #D4AF37;
+}
+
+/* ===== HEADER SECTION ===== */
+
+/* Header Navbar - White with black text */
+.header--section {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.header--navbar {
+    background-color: #FFFFFF !important;
+    border-bottom: none;
+}
+
+.header--navbar .navbar-brand {
+    color: #000000;
+}
+
+/* Header Navigation Links */
+.header-nav--links > li > a {
+    color: #000000;
+    font-weight: 400;
+}
+
+.header-nav--links > li > a:hover,
+.header-nav--links > li > a:focus {
+    color: #D4AF37;
+}
+
+/* Header Search Form */
+.header--navbar .navbar-form .form-control {
+    border-color: #E0E0E0;
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+.header--navbar .navbar-form button {
+    color: #000000;
+}
+
+.header--navbar .navbar-form button:hover {
+    color: #D4AF37;
+}
+
+/* Top Navigation (Login/Register) */
+section#header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+ul.top-nav > li > a {
+    color: #333333;
+}
+
+ul.top-nav > li > a:hover,
+ul.top-nav > li > a:focus {
+    color: #D4AF37;
+}
+
+ul.top-nav > li.primary-action > a.btn {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+ul.top-nav > li.primary-action > a.btn:hover {
+    background-color: #B8941F;
+    border-color: #B8941F;
+}
+
+/* ===== BUTTONS ===== */
+
+.btn-default {
+    color: #000000;
+    background-color: transparent;
+    border-color: #D4AF37;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+    color: #FFFFFF;
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #FFFFFF;
+    background-color: #B8941F;
+    border-color: #B8941F;
+}
+
+.btn-warning,
+.btn-info {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+.btn-warning:hover,
+.btn-info:hover {
+    background-color: #B8941F;
+    border-color: #B8941F;
+}
+
+/* ===== NAVIGATION BAR ===== */
+
+/* Remove the blue navbar styling */
+section#main-menu {
+    display: none !important;
+}
+
+.navbar-main {
+    background-color: #FFFFFF;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    border-color: #E0E0E0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #D4AF37;
+}
+
+/* ===== HOME BANNER ===== */
+
+section#home-banner {
+    background-color: #F8F8F8;
+    color: #000000;
+}
+
+section#home-banner h2 {
+    color: #000000;
+}
+
+section#home-banner .btn.search {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+}
+
+section#home-banner .btn.search:hover {
+    background-color: #B8941F;
+}
+
+section#home-banner .btn.transfer {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+section#home-banner .btn.transfer:hover {
+    background-color: #000000;
+}
+
+/* ===== HOME SHORTCUTS ===== */
+/* Hidden via header.tpl edit */
+
+/* ===== MAIN BODY ===== */
+
+section#main-body {
+    background-color: #FFFFFF;
+}
+
+/* ===== FORMS ===== */
+
+.form-control {
+    border-color: #E0E0E0;
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+.form-control:focus {
+    border-color: #D4AF37;
+    box-shadow: none;
+}
+
+/* ===== PANELS ===== */
+
+.panel-default {
+    border-color: #E0E0E0;
+}
+
+.panel-default > .panel-heading {
+    background-color: #F8F8F8;
+    border-color: #E0E0E0;
+    color: #000000;
+}
+
+.panel-accent-gold {
+    border-top-color: #D4AF37;
+}
+
+/* ===== TABLES ===== */
+
+.table-list thead th {
+    background-color: #F8F8F8;
+    border-bottom-color: #D4AF37;
+    color: #000000;
+}
+
+.dataTables_wrapper .dataTables_info {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.table-list > tbody > tr > td {
+    background-color: #FFFFFF;
+}
+
+.table-list > tbody > tr:nth-child(even) > td {
+    background-color: #F8F8F8;
+}
+
+/* ===== PAGINATION ===== */
+
+.pagination > li > a,
+.pagination > li > span {
+    color: #000000;
+    border-color: #E0E0E0;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+/* ===== FOOTER ===== */
+
+.footer--section {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.footer--widgets {
+    background-color: #000000;
+}
+
+.footer--widgets .widget--title h2 {
+    color: #D4AF37;
+}
+
+.footer--widgets a {
+    color: #FFFFFF;
+}
+
+.footer--widgets a:hover {
+    color: #D4AF37;
+}
+
+.footer--copyright {
+    background-color: #000000;
+    border-top: 1px solid #333333;
+    color: #999999;
+}
+
+.footer--copyright a {
+    color: #D4AF37;
+}
+
+.footer--copyright a:hover {
+    color: #E5C66B;
+}
+
+/* Back to Top Button */
+.back-to-top-btn a {
+    color: #FFFFFF;
+    background-color: #D4AF37;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.back-to-top-btn a:hover {
+    background-color: #B8941F;
+    color: #FFFFFF;
+}
+
+/* ===== DOMAIN CHECKER ===== */
+
+.domain-checker-container {
+    background: linear-gradient(135deg, #F8F8F8 0%, #FFFFFF 100%);
+    border-radius: 10px;
+}
+
+.domain-checker-container .input-group-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+}
+
+.domain-checker-available {
+    color: #4CAF50;
+}
+
+.domain-checker-unavailable {
+    color: #F44336;
+}
+
+/* ===== ALERTS & NOTIFICATIONS ===== */
+
+.alert-info {
+    background-color: #E5C66B;
+    border-color: #D4AF37;
+    color: #000000;
+}
+
+.alert-success {
+    background-color: #DFF0D8;
+    border-color: #4CAF50;
+    color: #000000;
+}
+
+.alert-warning {
+    background-color: #FCF8E3;
+    border-color: #D4AF37;
+    color: #000000;
+}
+
+.alert-danger {
+    background-color: #F2DEDE;
+    border-color: #D9534F;
+    color: #000000;
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar .panel-sidebar > .panel-heading {
+    background-color: #F8F8F8;
+    color: #000000;
+}
+
+.sidebar .list-group-item {
+    border-color: #E0E0E0;
+}
+
+.sidebar .list-group-item:hover {
+    background-color: #F8F8F8;
+}
+
+.sidebar a.list-group-item.active {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+/* ===== CLIENT AREA ===== */
+
+.client-home-panels .panel > .panel-heading {
+    background-color: #F8F8F8;
+}
+
+.tiles .tile {
+    background-color: #F8F8F8;
+    border-color: #E0E0E0;
+}
+
+.tiles .tile:hover {
+    background-color: #EFEFEF;
+}
+
+.tile .highlight {
+    background-color: #D4AF37;
+}
+
+/* ===== STATUS INDICATORS ===== */
+
+.status-active,
+.status-paid {
+    color: #4CAF50;
+}
+
+.status-pending {
+    color: #D4AF37;
+}
+
+.status-suspended,
+.status-unpaid {
+    color: #F44336;
+}
+
+/* ===== PRELOADER ===== */
+
+.spinners .spinner {
+    border-color: #E0E0E0;
+    border-top-color: #D4AF37;
+}
+
+/* ===== BREADCRUMBS ===== */
+
+.breadcrumb {
+    background-color: #F8F8F8;
+}
+
+.breadcrumb > .active {
+    color: #D4AF37;
+}
+
+/* ===== BADGES & LABELS ===== */
+
+.badge {
+    background-color: #D4AF37;
+}
+
+.label-default {
+    background-color: #333333;
+}
+
+.label-primary {
+    background-color: #D4AF37;
+}
+
+.label-info {
+    background-color: #E5C66B;
+    color: #000000;
+}
+
+.label-warning {
+    background-color: #D4AF37;
+}
+
+/* ===== MISC ===== */
+
+/* Remove any purple/blue/indigo colors */
+.bg-color-purple,
+.panel-accent-purple {
+    background-color: #D4AF37 !important;
+    border-top-color: #D4AF37 !important;
+}
+
+/* Ensure proper contrast on dark backgrounds */
+.bg--overlay {
+    color: #FFFFFF;
+}
+
+/* Clean minimal borders */
+hr {
+    border-top-color: #E0E0E0;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+    background-color: #FFFFFF;
+    border-color: #E0E0E0;
+}
+
+.dropdown-menu > li > a {
+    color: #333333;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: #F8F8F8;
+    color: #D4AF37;
+}
+
+/* Input groups */
+.input-group-btn .btn {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+.input-group-btn .btn:hover {
+    background-color: #B8941F;
+    border-color: #B8941F;
+}
+
+/* Modals */
+.modal-header {
+    background-color: #F8F8F8;
+    border-bottom-color: #E0E0E0;
+}
+
+.modal-footer {
+    background-color: #F8F8F8;
+    border-top-color: #E0E0E0;
+}
+
+/* Wells */
+.well {
+    background-color: #F8F8F8;
+    border-color: #E0E0E0;
+}
+
+/* Progress bars */
+.progress {
+    background-color: #F8F8F8;
+}
+
+.progress-bar {
+    background-color: #D4AF37;
+}
+
+/* Tooltips */
+.tooltip-inner {
+    background-color: #000000;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #000000;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #000000;
+}
+
+/* Popovers */
+.popover {
+    border-color: #E0E0E0;
+}
+
+.popover-title {
+    background-color: #F8F8F8;
+    border-bottom-color: #E0E0E0;
+}
